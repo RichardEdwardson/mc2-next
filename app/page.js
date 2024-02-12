@@ -1,113 +1,114 @@
-import Image from "next/image";
-
+"use client"
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="">
+      <div className="max-w-96 mx-auto pt-10">
+        <div className="py-2">
+          <MC2ChatLogo />
         </div>
+        <div className="my-3 px-10">
+          <RoomOptions />
+        </div>
+        <div className="overflow-hidden rounded-md bg-white shadow p-5 divide-y divide-gray-200">
+          <div className="my-3">
+            <h1 className="text-base font-light text-center text-[#666]"
+            >Sign in to get started...</h1>
+            <JoinRoomForm />
+
+          </div>
+
+          <div className="pt-5">
+          <button className=" w-full bg-[#265B89] text-white text-sm font-light p-2">Login</button>
+            
+
+          </div>
+          
+        </div>
+
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   );
+}
+
+
+function MC2ChatLogo() {
+  return (
+    <p className="text-4xl text-[#444] text-center">
+      <span className="font-bold">MC²</span>
+      <span className="font-extralight">Chat</span>
+    </p>
+  )
+}
+
+import { RadioGroup } from "@headlessui/react";
+import { clsx } from "clsx";
+import { useState } from "react";
+
+function RoomOptions() {
+  const options = ['create room', 'join room']
+  const [option, setOption] = useState(options[0])
+
+  return (
+    <RadioGroup
+      className="flex justify-center text-lg font-semibold  "
+      value={option}
+      onChange={setOption}
+    >
+      {options.map((value, index) => (
+        <RadioGroup.Option
+          key={index}
+          value={value}
+          className={({ checked, active }) => clsx(
+            'cursor-pointer rounded-full p-2 text-center w-1/2 mx-3 uppercase text-sm font-bold transition duration-300',
+            {
+              'bg-[#b30e00] text-white': checked,
+              'text-gray-500': !checked,
+            }
+          )}
+        >
+          <span>{value}</span>
+
+        </RadioGroup.Option>
+      ))}
+
+    </RadioGroup>
+  )
+}
+
+import { Formik, Form, Field } from 'formik'
+function JoinRoomForm() {
+  return (
+    <Formik
+      initialValues={{
+        username: '',
+        roomname: '',
+      }}
+      onSubmit={async (values) => {
+        await new Promise((r) => setTimeout(r, 500));
+        alert(JSON.stringify(values, null, 2));
+      }}
+    >
+      <Form className="">
+        <div className="relative">
+          <Field className="border w-full py-[6px] h-[34px] pl-[12px] pr-[35px] my-[5px] font-light text-sm"
+            id="username" name="username" placeholder="Username" />
+          <GlyphiconUser className="absolute top-0 right-0 h-[14px] my-[15px] mx-[9px]"/>
+        </div>
+        <Field className="border w-full py-[6px] h-[34px] px-[12px] my-[5px] font-light text-sm"
+          id="roomname" name="roomname" placeholder="Room Name" />
+      </Form>
+    </Formik>
+  )
+}
+
+//<button type="submit">Submit</button>
+function GlyphiconUser({className}) {
+  return (
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 110 109.6086">
+      <g>
+        <path fill="#777777" d="M55.01,109.54c-16.73,0-33.46-.08-50.18.07-3.49.03-4.41-1.17-4.73-4.57-.59-6.19,1.58-10.02,7.05-13.15,8.89-5.08,17.32-10.95,25.93-16.51,3.16-2.04,4.91-7.37,3.63-10.67-.22-.56-.57-.72-1.03-.94-5.78-2.72-7.77-7.88-7.95-13.65-.25-8.47-.23-16.99.24-25.45C28.73,10.98,40.96.01,54.97,0c14-.01,26.29,10.97,27.04,24.64.47,8.46.49,16.97.24,25.45-.17,5.77-2.21,10.82-7.89,13.73-2.64,1.35-1.37,9.02,1.86,11.15,6.45,4.24,12.98,8.36,19.47,12.53,2.34,1.5,4.54,3.34,7.06,4.45,6.05,2.66,7.77,7.19,7.1,13.45-.32,3.01-1.12,4.23-4.29,4.21-16.85-.11-33.71-.05-50.56-.05Z"/>
+      </g>
+    </svg>
+  )
 }
